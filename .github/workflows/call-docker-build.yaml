@@ -45,7 +45,7 @@ jobs:
       image-names: |
         tostanoski/vvh-jekyll
         ghcr.io/tostanoski/vvh-jekyll
-      platforms: linux/amd64,linux/arm64,linux/arm/v7
+      platforms: linux/amd64,linux/arm64
       target: jekyll
 
   build-jekyll-serve-image:
@@ -76,5 +76,5 @@ jobs:
       image-names: |
         tostanoski/vvh-jekyll-serve 
         ghcr.io/tostanoski/vvh-jekyll-serve
-      platforms: linux/amd64,linux/arm64,linux/arm/v7
+      platforms: linux/amd64,linux/arm64
       target: jekyll-serve
