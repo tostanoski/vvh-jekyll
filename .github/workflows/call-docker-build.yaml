@@ -34,17 +34,17 @@ jobs:
       packages: write # needed to push docker image to ghcr.io
       pull-requests: write # needed to create and update comments in PRs
     
-    secrets:
+#    secrets:
 
-      dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
-      dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
+#      dockerhub-username: ${{ secrets.DOCKERHUB_USERNAME }}
+ #     dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
 
     with:
-      dockerhub-enable: true
+      dockerhub-enable: false
       ghcr-enable: true
       image-names: |
-        bretfisher/jekyll
-        ghcr.io/bretfisher/jekyll
+        tostanoski/vvh-jekyll
+        ghcr.io/tostanoski/vvh-jekyll
       platforms: linux/amd64,linux/arm64,linux/arm/v7
       target: jekyll
 
@@ -71,10 +71,10 @@ jobs:
       dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
 
     with:
-      dockerhub-enable: true
+      dockerhub-enable: false
       ghcr-enable: true
       image-names: |
-        bretfisher/jekyll-serve 
-        ghcr.io/bretfisher/jekyll-serve
+        tostanoski/vvh-jekyll-serve 
+        ghcr.io/tostanoski/vvh-jekyll-serve
       platforms: linux/amd64,linux/arm64,linux/arm/v7
       target: jekyll-serve
