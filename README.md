@@ -23,7 +23,7 @@ What follows is all the technical goodness that Bret wrote. It's kept here for p
 
 [^1]: It's a really, really big project. Thousand pages or thereabouts. When we do production builds a number of websites are made out of subsets of these pages. The tech writers have the ability to make local production builds for testing purposes, but Jekyll's development server is usually more convenient for their purposes. This cranky old man does indeed have a heart, and instead of making everyone do it like me, I do my best to make things easy for them.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 [![GitHub Super-Linter](https://github.com/bretfisher/jekyll-serve/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Docker Build](https://github.com/BretFisher/jekyll-serve/actions/workflows/call-docker-build.yaml/badge.svg)](https://github.com/BretFisher/jekyll-serve/actions/workflows/call-docker-build.yaml)
@@ -106,4 +106,4 @@ just add the jekyll options to the end of the `bretfisher/jekyll`:
 ```shell
 docker run -v $(pwd):/site bretfisher/jekyll doctor
 ```
-
+```
