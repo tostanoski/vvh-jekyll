@@ -23,7 +23,7 @@ What follows is all the technical goodness that Bret wrote. It's kept here for p
 
 [^1]: It's a really, really big project. Thousand pages or thereabouts. When we do production builds a number of sites are made out of subsets of these pages. The tech writers have the ability to make local production builds for testing purposes, but Jekyll's development server is usually more convenient for their purposes. This cranky old man does indeed have a heart, and instead of making everyone do it like me, I do my best to make things easy for them.
 
-```markdown
+---
 
 [![GitHub Super-Linter](https://github.com/bretfisher/jekyll-serve/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Docker Build](https://github.com/BretFisher/jekyll-serve/actions/workflows/call-docker-build.yaml/badge.svg)](https://github.com/BretFisher/jekyll-serve/actions/workflows/call-docker-build.yaml)
@@ -89,12 +89,12 @@ docker-compose up
 ## Known issues
 
 1. `arm/v7` version (aka `armhf`) doesn't exist in this repository.
-    - Yes, `arm/v7` has become too difficult to support.
+    * Yes, `arm/v7` has become too difficult to support.
 2. `alpine` version doesn't exist in this repository.
-    - Yes, not all Jekyll dependencies are built with `musl` support, so `glibc`-based images are now the only option (Debian).
+    * Yes, not all Jekyll dependencies are built with `musl` support, so `glibc`-based images are now the only option (Debian).
 3. RESOLVED as of Jekyll 4.3
     ~~`webrick` errors during startup.~~
-    - ~~As of April 2021, Ruby 3.0 is out, and Jekyll is still on 4.2 (released 12/2020). Jekyll 4.2 doesn't have `webrick` listed as a dependency, so we'll have to manually add it to Gemfile for now if you want to use Ruby 3.0.~~
+    ~~- As of April 2021, Ruby 3.0 is out, and Jekyll is still on 4.2 (released 12/2020). Jekyll 4.2 doesn't have `webrick` listed as a dependency, so we'll have to manually add it to Gemfile for now if you want to use Ruby 3.0.~~
     ~~Ruby 3.0 removed this bundled gems so you'll need to add them manually if you use them: `sdbm`, `webrick`, `net-telnet`, `xmlrpc`. Hopefully Jekyll 4.3 will have `webrick` listed as a Jekyll dependency (it is fixed in Jekyll master branch) so manually updating Gemfiles won't be needed.~~
 
 ## Q&A
@@ -105,6 +105,4 @@ just add the jekyll options to the end of the `bretfisher/jekyll`:
 
 ```shell
 docker run -v $(pwd):/site bretfisher/jekyll doctor
-```
-
 ```
