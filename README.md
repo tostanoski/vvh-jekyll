@@ -2,7 +2,7 @@
 
 This is a fork of [Bret Fisher's](https://bretfisher.com/) excellent [Docker images for Jekyll](https://github.com/BretFisher/jekyll-serve). I'd been using `bretfisher/jekyll-serve` for the [Veeva Vault Help](https://veevavault.help/) project at my day job, and recently his update to Ruby 3 looks to have caused our development builds to become surprisingly slow [^1] on Intel Macs to the point where what once took approximately three minutes could build for hours and never complete. 
 
-Bret is a good human being and he did a great job helping me figure out what was happening and to nail down the software versions we want to pin to. I forked his repo, merged in the branch that worked for our project, took a few things out that we didn't need (I'll get to that) and somehow fumbled my way into this intial version with a working set of Docker images. I'm not entirely sure if they're different, but they're there, and they work.
+Bret is a good human being and he did a great job helping me figure out what was happening and to nail down the software versions we want to pin to. I forked his repository, merged in the branch that worked for our project, took a few things out that we didn't need (I'll get to that) and somehow fumbled my way into this intial version with a working set of Docker images. I'm not entirely sure if they're different, but they're there, and they work.
 
 `ghcr.io/tostanoski/vvh-jekyll`
 
