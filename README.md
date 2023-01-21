@@ -30,12 +30,12 @@ What follows is all the technical goodness that Bret wrote. It's kept here for p
 
 > But this has been done. Why not `docker run jekyll/jekyll`?
 
-- I wanted two images, one for easy CLI (`bretfisher/jekyll`) and one for
+* I wanted two images, one for easy CLI (`bretfisher/jekyll`) and one for
 easy local server for dev with sane defaults (`bretfisher/jekyll-serve`), which I use 90% of the time
-- So you can start any Jekyll server with `docker-compose up`
-- I wanted to dev on a local Jekyll site without having Jekyll installed on my host OS
-- I wanted it to be as easy as possible to start
-- I wanted current `amd64` and `arm64` images using official Ruby and Jekyll latest
+* So you can start any Jekyll server with `docker-compose up`
+* I wanted to dev on a local Jekyll site without having Jekyll installed on my host OS
+* I wanted it to be as easy as possible to start
+* I wanted current `amd64` and `arm64` images using official Ruby and Jekyll latest
 
 > So, this does that.
 
