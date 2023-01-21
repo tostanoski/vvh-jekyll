@@ -1,6 +1,6 @@
 # Jekyll in a Docker Container: Veeva Vault Help Edition
 
-This is a fork of [Bret Fisher's](https://bretfisher.com/) excellent [Docker images for Jekyll](https://github.com/BretFisher/jekyll-serve). I'd been using `bretfisher/jekyll-serve` for the [Veeva Vault Help](https://veevavault.help/) project at my day job, and recently his update to Ruby 3 looks to have caused our development builds to become surprisingly slow [^1] on Intel Macs to the point where what once took approximately three minutes could build for hours and never complete. 
+This is a fork of [Bret Fisher's](https://bretfisher.com/) excellent [Docker images for Jekyll](https://github.com/BretFisher/jekyll-serve). I'd been using `bretfisher/jekyll-serve` for the [Veeva Vault Help](https://veevavault.help/) project at my day job, and recently his update to Ruby 3 looks to have caused our development builds to become surprisingly slow [^1] on Intel Macs to the point where what once took approximately three minutes could build for hours and never complete.
 
 Bret is a good human being and he did a great job helping me figure out what was happening and to nail down the software versions we want to pin to. I forked his repository, merged in the branch that worked for our project, took a few things out that we didn't need (I'll get to that) and somehow fumbled my way into this intial version with a working set of Docker images. I'm not entirely sure if they're different, but they're there, and they work.
 
@@ -14,16 +14,16 @@ Here's what I changed from the original:
 
 * When I change the image, it doesn't publish to Docker Hub. I might do this eventually, as it seems to be proper form. GHCR seems to be working fine, so once I have proper access through my employer I'll look into it.
 * Changed all the image names to protect the guilty.
-* Updated the copyright on the MIT license, dropped the Funding file (nothing I have done here is worth your money; give it to Bret), and updated this README. 
+* Updated the copyright on the MIT license, dropped the Funding file (nothing I have done here is worth your money; give it to Bret), and updated this README.
 * More significantly, I yanked out all the `arm/v7` references. We're a Mac shop, and while IT has started deploying M1 MacBook Pros, the bulk of our team still has Intel Macs. So, our image must include `arm64` and `amd64`, and once every writer is transitioned to the new platform, `amd64` will likely go away. Yeah, roll your own. Don't do what I did and then end up in a spot because of something I did :smile:
 
-As I learn more about Docker images, GitHub Actions, and how all of the moving parts for Jekyll work together I'm going to try to optimize things further. One of my employer's core values is Speed. The more I can get Jekyll and Docker out of the way of the writers, the faster they can commit their article updates. They're happy, the powers that be are happy, and I'm happy, mostly because everyone else is happy. 
+As I learn more about Docker images, GitHub Actions, and how all of the moving parts for Jekyll work together I'm going to try to optimize things further. One of my employer's core values is Speed. The more I can get Jekyll and Docker out of the way of the writers, the faster they can commit their article updates. They're happy, the powers that be are happy, and I'm happy, mostly because everyone else is happy.
 
 What follows is all the technical goodness that Bret wrote. It's kept here for posterity. I don't recommend using instructions to set things up, as, again, you probably don't want to use these images. But, there's here for now, possibly to help with future development. I must find out if there's a best practice for this.
 
-[^1]: It's a really, really big project. Thousand pages or thereabouts. When we do production builds a number of websites are made out of subsets of these pages. The tech writers have the ability to make local production builds for testing purposes, but Jekyll's development server is usually more convenient for their purposes. This cranky old man does indeed have a heart, and instead of making everyone do it like me, I do my best to make things easy for them.
+[^1]: It's a really, really big project. Thousand pages or thereabouts. When we do production builds a number of sites are made out of subsets of these pages. The tech writers have the ability to make local production builds for testing purposes, but Jekyll's development server is usually more convenient for their purposes. This cranky old man does indeed have a heart, and instead of making everyone do it like me, I do my best to make things easy for them.
 
-```
+```markdown
 
 [![GitHub Super-Linter](https://github.com/bretfisher/jekyll-serve/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Docker Build](https://github.com/BretFisher/jekyll-serve/actions/workflows/call-docker-build.yaml/badge.svg)](https://github.com/BretFisher/jekyll-serve/actions/workflows/call-docker-build.yaml)
@@ -106,4 +106,5 @@ just add the jekyll options to the end of the `bretfisher/jekyll`:
 ```shell
 docker run -v $(pwd):/site bretfisher/jekyll doctor
 ```
+
 ```
