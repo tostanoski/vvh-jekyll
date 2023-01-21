@@ -5,6 +5,7 @@ This is a fork of [Bret Fisher's](https://bretfisher.com/) excellent [Docker ima
 Bret is a good human being and he did a great job helping me figure out what was happening and to nail down the software versions we want to pin to. I forked his repo, merged in the branch that worked for our project, took a few things out that we didn't need (I'll get to that) and somehow fumbled my way into this intial version with a working set of Docker images. I'm not entirely sure if they're different, but they're there, and they work.
 
 `ghcr.io/tostanoski/vvh-jekyll`
+
 `ghcr.io/tostanoski/vvh-jekyll-serve`
 
 You _probably_ don't want to use these images for your project. If you do and you find that they work, you should do what I did above and fork the project. Juggling images when things change is not fun.
