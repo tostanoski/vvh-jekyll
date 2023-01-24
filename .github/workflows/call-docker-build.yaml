@@ -41,7 +41,7 @@ jobs:
 
     with:
       dockerhub-enable: false
-      ghcr-enable: false
+      ghcr-enable: true
       image-names: |
         tostanoski/vvh-jekyll
         ghcr.io/tostanoski/vvh-jekyll
