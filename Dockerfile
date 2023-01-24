@@ -1,5 +1,5 @@
 # Comparing full Jekyll image to slimmed down Jekyll-Serve image. Will remove old code if unnecessary.
-FROM ruby:2.7
+FROM ruby:2.7 as jekyll
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
