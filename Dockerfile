@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundler && gem install jekyll -v 4.2.2
+RUN gem update --system && gem install bundler && gem install sass-embedded -v 1.58.0 && gem install jekyll
 
 EXPOSE 4000
 
