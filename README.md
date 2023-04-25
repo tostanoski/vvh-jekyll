@@ -21,7 +21,7 @@ As I learn more about Docker images, GitHub Actions, and how all of the moving p
 
 What follows is all the technical goodness that Bret wrote. It's kept here for posterity. I don't recommend using instructions to set things up, as, again, you probably don't want to use these images. But, there's here for now, possibly to help with future development. I must find out if there's a best practice for this.
 
-[^1]: It's a really, really big project. Thousand pages or thereabouts. When we do production builds a number of sites are made out of subsets of these pages. The tech writers have the ability to make local production builds for testing purposes, but Jekyll's development server is usually more convenient for their purposes. This cranky old man does indeed have a heart, and instead of making everyone do it like me, I do my best to make things easy for them.
+[^1]: It's a really, really big project. Thousand pages or thereabouts. When we do production builds a number of sites are made out of subsets of these pages. The tech writers have the ability to make local production builds for testing purposes, but Jekyll's development server is usually more convenient for their purposes. This cranky old man does indeed have a kind heart, and instead of making everyone do it like me, I do my best to make things easy for them.
 
 ---
 
